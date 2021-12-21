@@ -15,7 +15,7 @@ const courses = [
 const filters = [...new Set(courses.flatMap((course) => course.tags))];
 const filtersContainer = document.querySelector(".filters");
 const coursesContainer = document.querySelector(".courses");
-const selectedFilters = new Set([]);
+// const selectedFilters = new Set([]);
 
 filtersContainer.addEventListener("click", onSelectFilter);
 renderFilters();
@@ -44,7 +44,10 @@ function onSelectFilter(event) {
     return renderCourses(courses);
   }
   nextFilterEl.classList.add("is-selected");
-  renderCourses(getFilteredCourses(nextFilterValue));
+
+  // renderCourses(getFilteredCourses(nextFilterValue));
+  const filteredCourses = getFilteredCourses(nextFilterValue);
+  renderCourses(filteredCourses);
 }
 
 function renderCourses(courses) {

@@ -16,7 +16,7 @@
 import "../css/common.css";
 import pokemonCardTpl from "../templates/pokemon-card.hbs";
 import API from "./api-service";
-import getRefs from "./get-refs";
+// import getRefs from "./get-refs";
 
 const refs = getRefs();
 
@@ -55,3 +55,25 @@ const options = {
 fetch(url, options)
   .then((r) => r.json())
   .then(console.log);
+
+///get-refs.js///
+
+// export default
+// function getRefs() {
+//   return {
+//     cardContainer: document.querySelector(".js-card-container"),
+//     searchForm: document.querySelector(".js-search-form"),
+//   };
+// }
+
+///api-service.js///
+
+// const BASE_URL = "https://pokeapi.co/api/v2";
+
+// function fetchPokemon(pokemonId) {
+//   return fetch(`${BASE_URL}/pokemon/${pokemonId}`).then((response) =>
+//     response.json()
+//   );
+// }
+
+// export default { fetchPokemon };
